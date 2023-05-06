@@ -1,0 +1,17 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: web_profile/index.html
+  upload: web_profile/index.html
+
+- url: /(.*)
+  static_files: web_profile/\1
+  upload: web_profile/(.*)
+
+
+runtime: nodejs16
+service: default
+
